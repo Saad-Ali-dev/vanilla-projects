@@ -2,21 +2,23 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 body{
     display: flex;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: 100%;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 h1{
-    font-size: 100px;
+    font-size: clamp(3rem, 15vw, 100px);
     font-weight: bold;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: clamp(15px, 4vw, 30px);
     letter-spacing: 3px;
 }
 
@@ -27,12 +29,19 @@ button{
     border-radius: 10%;
     box-shadow: 2px 2px black;
     margin: 0 5px;
-    padding: 5px 10px;
-    font-size: 1rem;
+    padding: clamp(5px, 2vw, 10px) clamp(10px, 3vw, 20px);
+    font-size: clamp(0.875rem, 2vw, 1rem);
     transition: background-color 0.2s ease;
 }
 
 button:hover{
     cursor: pointer;
     background-color: hsl(195, 56%, 35%);
+}
+
+@media (max-width: 480px) {
+    button {
+        margin: 0 3px;
+        padding: 8px 12px;
+    }
 }
