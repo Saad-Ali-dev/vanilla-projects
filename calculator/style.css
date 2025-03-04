@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-box{
+    width: 30%;
+    height: 85%;
+    background-color: rgb(22, 22, 22);
+    border-radius: 3%;
+    overflow: hidden;
+}
+
+.output-screen{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(40, 40, 40);
+    overflow: hidden;
+    padding: 10px 20px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.box{
+    display: flex;
+    margin-top: 30px;
+}
+
+.input-button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.operators{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 85%;
+    padding: 10px;
+    gap: 10px;
+}
+
+.operators > .input-button {
+    background-color: rgb(255, 123, 0);
+    color: white;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.operators > .input-button:hover{
+    background-color: rgb(196, 72, 0);
+    cursor: pointer;
+}
+
+.numbers{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    height: 85%;
+    padding: 10px;
+    gap: 10px;
+    margin-left: -5px;
+}
+
+.numbers > .input-button {
+    background-color: rgb(80, 80, 80);
+    color: white;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.numbers > .input-button:hover{
+    background-color: rgb(40, 40, 40);
+    cursor: pointer;
+}
+
+button{
+    border: none;
+    background-color: rgb(255, 123, 0);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    transition: background-color 0.15s ease-in-out;
+    margin-top: 12px;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: rgb(196, 72, 0);
+}
+
+.delete-button{
+    padding: 7px 15px;
+}
+
+.bracket{
+    padding: 7px 20px;
+}
+
+
+.error-heading{
+    width: 100%;
+    height: 30%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px;
+    background-color: rgb(200, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-message{
+    padding: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.error-box {
+    position: absolute;
+    left: -300px; /* Start off-screen */
+    top: 100px; /* Adjust as per your layout */
+    background: red;
+    color: white;
+    padding: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.3s;
+}
+
+.error-box.show {
+    transform: translateX(350px); /* Move to visible position */
+    opacity: 1;
+}
+
+.error-box.hide {
+    transform: translateX(0);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out 2.5s, opacity 0.3s 2.5s; /* Delayed exit */
+}

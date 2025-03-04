@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.weather-container {
+    width: 100%;
+    max-width: 375px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('./image/weather-app-background.jpeg') center/cover;
+    border-radius: 30px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.current-weather {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.temperature {
+    font-size: 5rem;
+    font-weight: 200;
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.description {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.forecast {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.forecast-day {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.forecast-day:last-child {
+    border-bottom: none;
+}
+
+.forecast-temp {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.add-location {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 15px;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-location:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 375px) {
+    .weather-container {
+        border-radius: 0;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+}

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+h1{
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 7px;
+    padding-top: 10px;
+    color: rgb(30, 30, 30);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+}
+
+.line{
+    position: relative;
+    top: -30px;
+    border-bottom: 2px solid rgb(3, 136, 252);
+    margin: -5px calc(100vw / 2.15);
+}
+
+.container{
+    width: 680px;
+    height: 420px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.circle{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.empty-circle{
+    background-color: rgb(3, 136, 252);
+    position: absolute;
+    right: 262px;
+    top: -3px;
+    z-index: -1;
+}
+
+div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.arrows{
+    display: flex;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+button{
+    border: none;
+    background-color: rgb(3, 136, 252);
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover{
+    background-color: rgb(0, 119, 255);
+    cursor: pointer;
+}
+
+.name{
+    font-size: 1.5rem;
+    color:rgb(30, 30, 30);
+    margin-top: 10px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.job{
+    color: rgb(3, 136, 252);
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.description{
+    width: 80%;
+    text-align: center;
+    color: rgb(30, 30, 30);
+    
+}

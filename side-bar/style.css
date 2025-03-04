@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", "sans-serif";
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: rgb(221, 221, 221);
+}
+
+#toggle-button{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: transform 0.2s ease;
+}
+
+#toggle-button:hover{
+    transform: scale(1.2);
+}
+
+#side-bar{
+    width: 300px; 
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: -300px; 
+    transition: transform 0.3s ease-in-out;
+    background-color: white; 
+}
+
+.active {
+    transform: translateX(300px); 
+}
+
+.heading{
+    font-size: 2rem;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.link{
+    padding: 20px;
+    padding-left: 40px;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.link:hover{
+    cursor: pointer;
+    background-color: aquamarine;
+    color: rgba(50, 50, 50, 0.5);
+}
+
+
+@media screen and (max-width: 768px) {
+    #side-bar {
+        width: 250px;
+        left: -250px;
+    }
+    
+    .active {
+        transform: translateX(250px);
+    }
+
+    .heading {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+
+    .link {
+        font-size: 1.2rem;
+        padding: 15px;
+        padding-left: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #side-bar {
+        width: 200px;
+        left: -200px;
+    }
+    
+    .active {
+        transform: translateX(200px);
+    }
+
+    #toggle-button {
+        font-size: 1.5rem;
+        right: 8%;
+        top: 3%;
+    }
+
+    .heading {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+
+    .link {
+        font-size: 1rem;
+        padding: 12px;
+        padding-left: 20px;
+    }
+}
