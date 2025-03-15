@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker and Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <main class="main-box">
+            <h2>Expense Tracker and Calculator</h2>
+            <div class="current-balance-box">
+                <p class="balance-heading">YOUR BALANCE</p>
+                <p id="current-balance">$0.00</p>
+            </div>
+            <div class="expense-box">
+                <div class="income tracker-box">
+                    <p class="balance-heading" >INCOME</p>
+                    <p id="income-amount" class="amount">$0.00</p>
+                </div>
+                <div class="expense tracker-box">
+                    <p class="balance-heading">EXPENSE</p>
+                    <p id="expense-amount" class="amount">$0.00</p>
+                </div>
+            </div>
+            <div class="history-box">
+                <div class="heading">History</div>
+            </div>
+            <div class="add-new-transaction-box">
+                <div class="heading">Add New Transaction</div>
+                <form>
+                    <div class="input">
+                        <div class="text-input">
+                            <p>Text</p>
+                            <input type="text" id="text" placeholder="Enter text...">
+                        </div>
+                        <div class="amount-input">
+                            <p>Amount</p>
+                            <p>(negative - expense, positive - income)</p>
+                            <input type="number" id="amount" placeholder="Enter amount...">
+                        </div>
+                    </div>
+                    <button type="submit">Add Transaction</button>
+                </form>
+            </div>
+        </main>
+    </div>
+        
+<script src="account.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
